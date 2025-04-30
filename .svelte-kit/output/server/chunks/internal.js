@@ -1,7 +1,7 @@
 import { o as object_prototype, a as array_prototype, U as UNINITIALIZED, g as get_descriptor, b as get_prototype_of, i as is_array, s as safe_equals, e as equals, H as HYDRATION_ERROR, c as is_extensible, r as run_all, d as index_of, f as define_property, h as HYDRATION_START, j as HYDRATION_END, k as array_from, l as render, p as push$1, m as setContext, n as pop$1 } from "./index.js";
 import "clsx";
 const BROWSER = false;
-let base = "/sveltekit-github-pages";
+let base = "/BreadBirdGames.github.io";
 let assets = base;
 const app_dir = "_app";
 const initial = { base, assets };
@@ -1727,7 +1727,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1tudm0s"
+  version_hash: "1tqdi4f"
 };
 async function get_hooks() {
   let handle;
