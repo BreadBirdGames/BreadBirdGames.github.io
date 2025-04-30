@@ -5,7 +5,7 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 const config = {
   // Consult https://svelte.dev/docs/kit/integrations
   // for more information about preprocessors
-  preprocess: vitePreprocess({lang: "ts",}),
+  preprocess: vitePreprocess({ lang: "ts" }),
   compilerOptions: {
     customElement: true,
   },
