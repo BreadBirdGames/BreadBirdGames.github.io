@@ -1,0 +1,1 @@
+import{t as o,a as t}from"../chunks/BrlRvMJm.js";import"../chunks/CLb0Wg_W.js";import{n as p}from"../chunks/CIuKuh2F.js";var r=o("<h1>Welcome to Bread Bird Games</h1> <p>This site is in development. go away</p>",1);function s(e){var a=r();p(2),t(e,a)}export{s as component};
