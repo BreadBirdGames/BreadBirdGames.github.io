@@ -3,30 +3,30 @@
 <script lang="ts">
     import Menu from "$lib/Menu.svelte";
     import MenuItem from "$lib/MenuItem.svelte";
+
+    let { pageName = "" } = $props();
+
+    const isActive = (tabName: string) => {
+        return tabName === pageName ? "active" : "";
+    };
 </script>
 
-<!-- <div id="navbar">
-    <a class="nav-item" id="logo" href="/">
-        <img src="/Logo.png" alt="home" />
-    </a>
-    <a class="nav-item" id="about" href="/about">About</a>
-    <a class="nav-item" id="games" href="/">Games</a>
-</div> -->
-
 <ul id="navbar">
-    <li class="navbar-item" id="logo">
+    <li class="navbar-item {isActive('Index')}" id="logo">
         <a href="/"><img src="/Logo.png" alt="home" /></a>
     </li>
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
         <Menu>
-            <a href="/" id="games" slot="toggle">Games</a>
+            <a class={isActive("Games")} href="/" id="games" slot="toggle"
+                >Games</a
+            >
             <MenuItem class="menu-item"
                 ><a href="/FarmingDragons">Farming Dragons</a></MenuItem
             >
         </Menu>
     </li>
-    <li class="navbar-item">
+    <li class="navbar-item {isActive('About')}">
         <a href="/about"><span id="about">About</span></a>
     </li>
 </ul>
@@ -87,5 +87,10 @@
     a {
         color: white;
         text-decoration: none;
+    }
+
+    .active {
+        background-color: #222;
+        border-radius: 10px 10px 0 0;
     }
 </style>
