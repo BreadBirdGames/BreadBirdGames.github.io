@@ -5,5 +5,4 @@
 
 <navbar-component></navbar-component>
 
-<h1>Welcome to Bread Bird Games</h1>
-<p>This site is in development. go away</p>
+<h1>Who are we? some may call us gay, some may call us freaks!</h1>

@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-cornelius: #800080;
+    --color-daniel: #76cd26;
+    --color-devin: #f8e165;
+    --color-isa: #00d1d1;
+    --color-ida: #05535f;
+    --color-valdemar: #ff0000;
+}
