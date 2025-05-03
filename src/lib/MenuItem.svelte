@@ -6,6 +6,7 @@
         display: block;
         padding: 1rem;
         inline-size: 100%;
+        margin-bottom: -20px;
     }
 
     li:hover,
