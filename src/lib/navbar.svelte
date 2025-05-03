@@ -10,8 +10,6 @@
         return tabName === pageName ? "active" : "";
     };
 
-    import type { ComponentType } from "svelte";
-
     const modules = import.meta.glob<Object>("../routes/games/*/+page.svelte", {
         eager: true,
     });
