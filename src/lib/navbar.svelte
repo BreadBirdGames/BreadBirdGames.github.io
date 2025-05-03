@@ -9,6 +9,12 @@
     const isActive = (tabName: string) => {
         return tabName === pageName ? "active" : "";
     };
+
+    import type { ComponentType } from "svelte";
+
+    const modules = import.meta.glob<Object>("../routes/games/*/+page.svelte", {
+        eager: true,
+    });
 </script>
 
 <ul id="navbar">
@@ -18,12 +24,22 @@
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
         <Menu>
-            <a class={isActive("Games")} href="/" id="games" slot="toggle"
+            <a class={isActive("Games")} href="/games" id="games" slot="toggle"
                 >Games</a
             >
-            <MenuItem class="menu-item"
-                ><a href="/FarmingDragons">Farming Dragons</a></MenuItem
-            >
+
+            {#each Object.entries(modules) as [_path, module]}
+                <MenuItem class="menu-item">
+                    <a
+                        href="/games/{_path
+                            .replace('../routes/games/', '')
+                            .replace('/+page.svelte', '')}"
+                        >{_path
+                            .replace("../routes/games/", "")
+                            .replace("/+page.svelte", "")}</a
+                    >
+                </MenuItem>;
+            {/each}
         </Menu>
     </li>
     <li class="navbar-item {isActive('About')}">
