@@ -1,14 +1,18 @@
+:root {
+  --base-primary: #C8EBF3;
+  --base-secondary: #A4D3DF;
+  --mantle-primary: #FAD387;
+  --mantle-secondary: #F6DEB1;
+  --crust-primary: #FFB49A;
+  --crust-secondary: #63636F;
+  --text: #44434E;
+  --outline: #44434E;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --color-cornelius: #800080;
-  --color-daniel: #76cd26;
-  --color-devin: #f8e165;
-  --color-isa: #00d1d1;
-  --color-ida: #05535f;
-  --color-valdemar: #ff0000;
+  background-color: var(--base-primary);
+  color: var(--text); 
 }

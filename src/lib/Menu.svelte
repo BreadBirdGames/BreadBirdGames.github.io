@@ -18,7 +18,7 @@
         display: none;
         margin-block-start: 0;
         padding: 0;
-        background-color: #333;
+        background-color: var(--mantle-primary);
         visibility: hidden;
         opacity: 0;
         right: 45px;

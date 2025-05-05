@@ -27,16 +27,15 @@
             >
 
             {#each Object.entries(modules) as [_path, module]}
-                <MenuItem class="menu-item">
-                    <a
-                        href="/games/{_path
-                            .replace('../routes/games/', '')
-                            .replace('/+page.svelte', '')}"
-                        >{_path
-                            .replace("../routes/games/", "")
-                            .replace("/+page.svelte", "")}</a
-                    >
-                </MenuItem>;
+                <MenuItem
+                    path="/games/{_path
+                        .replace('../routes/games/', '')
+                        .replace('/+page.svelte', '')}"
+                >
+                    {_path
+                        .replace("../routes/games/", "")
+                        .replace("/+page.svelte", "")}
+                </MenuItem>
             {/each}
         </Menu>
     </li>
@@ -53,7 +52,8 @@
         margin: 5px;
         padding: 0;
         overflow: hidden;
-        background-color: #333;
+        background-color: var(--mantle-primary);
+        border: 2px solid var(--outline);
         display: flex;
         align-items: end;
         border-radius: 10px;
@@ -66,7 +66,7 @@
     .navbar-item a,
     #games {
         display: block;
-        color: white;
+        color: var(--text);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -75,7 +75,7 @@
 
     .navbar-item a:hover:not(.active),
     #games:hover:not(.active) {
-        background-color: #111;
+        background-color: var(--crust-primary);
     }
 
     #games {
@@ -99,12 +99,12 @@
     }
 
     a {
-        color: white;
+        color: var(--text);
         text-decoration: none;
     }
 
     .active {
-        background-color: #222;
+        background-color: var(--mantle-secondary);
         border-radius: 10px 10px 0 0;
     }
 </style>
