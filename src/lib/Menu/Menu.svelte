@@ -9,6 +9,7 @@
     }
 
     button {
+        font-family: "DynaPuff";
         border: none;
         background-color: inherit;
     }

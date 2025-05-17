@@ -1,3 +1,7 @@
+@import url("fonts.css");
+@import url("font-awesome/css/fontawesome.min.css");
+@import url("font-awesome/css/brands.min.css");
+
 :root {
   --base-primary: #C8EBF3;
   --base-secondary: #A4D3DF;
@@ -15,4 +19,5 @@ body {
   padding: 0;
   background-color: var(--base-primary);
   color: var(--text); 
+  font-family: "DynaPuff";
 }

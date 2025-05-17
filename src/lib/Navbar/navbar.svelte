@@ -1,8 +1,8 @@
 <svelte:options customElement="navbar-component" />
 
 <script lang="ts">
-    import Menu from "$lib/Menu.svelte";
-    import MenuItem from "$lib/MenuItem.svelte";
+    import Menu from "$lib/Menu/Menu.svelte";
+    import MenuItem from "$lib/Menu/MenuItem.svelte";
 
     let { pageName = "" } = $props();
 
@@ -10,9 +10,12 @@
         return tabName === pageName ? "active" : "";
     };
 
-    const modules = import.meta.glob<Object>("../routes/games/*/+page.svelte", {
-        eager: true,
-    });
+    const modules = import.meta.glob<Object>(
+        "../../routes/games/*/+page.svelte",
+        {
+            eager: true,
+        },
+    );
 </script>
 
 <ul id="navbar">
@@ -22,25 +25,23 @@
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
         <Menu>
-            <a class={isActive("Games")} href="/games" id="games" slot="toggle"
-                >Games</a
-            >
+            <a class={isActive("Games")} id="games" slot="toggle">Games</a>
 
             {#each Object.entries(modules) as [_path, module]}
                 <MenuItem
                     path="/games/{_path
-                        .replace('../routes/games/', '')
+                        .replace('../../routes/games/', '')
                         .replace('/+page.svelte', '')}"
                 >
                     {_path
-                        .replace("../routes/games/", "")
+                        .replace("../../routes/games/", "")
                         .replace("/+page.svelte", "")}
                 </MenuItem>
             {/each}
         </Menu>
     </li>
     <li class="navbar-item {isActive('About')}">
-        <a href="/about"><span id="about">About</span></a>
+        <a href="/about"><span id="about">About Us!</span></a>
     </li>
 </ul>
 

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'DynaPuff';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/DynaPuff-VariableFont_wdth,wght.ttf'); /* IE9 Compat Modes */
+    src: local('')
+        /* Modern Browsers */ url('/fonts/DynaPuff-VariableFont_wdth,wght.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'FA';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/font-awesome/webfonts/fa-regular-400.ttf'); /* IE9 Compat Modes */
+    src: local('')
+        /* Modern Browsers */ url('/fonts/font-awesome/webfonts/fa-regular-400.ttf') format('truetype'),
+}
