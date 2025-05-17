@@ -28,6 +28,16 @@
         grid-row: span 3 / span 3;
         height: 200px;
         width: 125px;
+        padding-right: 8px;
+        border-radius: 15px 100px 100px 15px;
+        border: 0 double transparent;
+        border-right-width: 2px;
+
+        background-image:
+            linear-gradient(lightblue, lightblue),
+            radial-gradient(at right, white 0%, lightblue 75%);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
     }
 
     .thumbnail {
