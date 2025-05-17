@@ -1,9 +1,7 @@
 <svelte:options customElement="grid-container" />
 
 <script lang="ts">
-    export let columns = "3";
-    export let rowHeight = "1fr";
-    export let gap = "2%";
+    let { columns = "3", rowHeight = "1fr", gap = "2%" } = $props();
 </script>
 
 <div

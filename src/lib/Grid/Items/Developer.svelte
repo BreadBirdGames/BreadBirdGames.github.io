@@ -1,10 +1,12 @@
 <svelte:options customElement="developer-tile" />
 
 <script lang="ts">
-    export let thumbnailPath = "";
-    export let name = "";
-    export let pronouns = "";
-    export let description = "";
+    let {
+        thumbnailPath = "",
+        name = "",
+        pronouns = "",
+        description = "",
+    } = $props();
 </script>
 
 <div class="grid-item">

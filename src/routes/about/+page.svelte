@@ -1,6 +1,8 @@
 <script>
     import "$lib/Styles/global.css";
     import Navbar from "$lib/Navbar/navbar.svelte";
+    import Grid from "$lib/Grid/Grid.svelte";
+    import Developer from "$lib/Grid/Items/Developer.svelte";
 </script>
 
 <navbar-component pageName="About"></navbar-component>
