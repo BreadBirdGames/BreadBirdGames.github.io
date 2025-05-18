@@ -27,7 +27,7 @@
         description="Programmer"
     >
         <a href="https://coffandro.github.io">
-            <i class="link fa-regular fa-globe"></i>
+            <i class="link fa-solid fa-globe"></i>
         </a>
         <a href="https://github.com/coffandro">
             <i class="link fa-brands fa-github"></i>
