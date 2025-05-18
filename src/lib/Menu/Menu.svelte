@@ -30,8 +30,10 @@
 
     div:hover,
     div:focus,
+    div:active,
     div:hover > menu,
-    div:focus > menu {
+    div:focus > menu,
+    div:active > menu {
         display: block;
         visibility: visible;
         opacity: 1;
