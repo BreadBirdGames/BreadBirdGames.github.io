@@ -81,15 +81,18 @@
         transform: translate(-50%, 125%);
     }
 
-    .grid-item:hover .description {
+    .grid-item:hover .description,
+    .grid-item:active .description {
         opacity: 1;
     }
 
-    .grid-item:hover .text-container {
+    .grid-item:hover .text-container,
+    .grid-item:active .text-container {
         height: 200px;
     }
 
-    .grid-item:hover .name {
+    .grid-item:hover .name,
+    .grid-item:active .name {
         transform: translate(-50%, -95%);
     }
 
