@@ -1,11 +1,12 @@
 <script>
     import "$lib/Styles/global.css";
     import Navbar from "$lib/Navbar/navbar.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <navbar-component pageName="Games"></navbar-component>
 
-<img id="background" src="/gameThumbs/HNAndersen.png" />
+<img id="background" src="{base}/gameThumbs/HNAndersen.png" />
 
 <div id="content">
     <h1>Unanswered Questions with H.N. Andersen</h1>
@@ -14,9 +15,9 @@
         during conferences, it sadly only works physically on premises
     </h3>
     <div class="images">
-        <img src="/games/EAC/Screenshot1.jpg" alt="screenshot1" />
-        <img src="/games/EAC/Screenshot2.jpg" alt="screenshot2" />
-        <img src="/games/EAC/Screenshot3.jpg" alt="screenshot3" />
+        <img src="{base}/games/EAC/Screenshot1.jpg" alt="screenshot1" />
+        <img src="{base}/games/EAC/Screenshot2.jpg" alt="screenshot2" />
+        <img src="{base}/games/EAC/Screenshot3.jpg" alt="screenshot3" />
     </div>
     <hr />
     <div class="links">

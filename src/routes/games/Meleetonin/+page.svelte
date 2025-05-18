@@ -1,11 +1,12 @@
 <script>
     import "$lib/Styles/global.css";
     import Navbar from "$lib/Navbar/navbar.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <navbar-component pageName="Games"></navbar-component>
 
-<img id="background" src="/gameThumbs/Meleetonin.png" />
+<img id="background" src="{base}/gameThumbs/Meleetonin.png" />
 
 <div id="content">
     <h1>Meleetonin</h1>
@@ -14,8 +15,8 @@
         to sleep by fighting off your nightmares
     </h3>
     <div class="images">
-        <img src="/games/Meleetonin/Screenshot1.png" alt="screenshot1" />
-        <img src="/games/Meleetonin/Screenshot2.png" alt="screenshot2" />
+        <img src="{base}/games/Meleetonin/Screenshot1.png" alt="screenshot1" />
+        <img src="{base}/games/Meleetonin/Screenshot2.png" alt="screenshot2" />
     </div>
     <hr />
     <div class="links">

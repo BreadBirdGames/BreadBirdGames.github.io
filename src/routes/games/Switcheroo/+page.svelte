@@ -1,11 +1,12 @@
 <script>
     import "$lib/Styles/global.css";
     import Navbar from "$lib/Navbar/navbar.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <navbar-component pageName="Games"></navbar-component>
 
-<img id="background" src="/gameThumbs/Switcheroo.png" />
+<img id="background" src="{base}/gameThumbs/Switcheroo.png" />
 
 <div id="content">
     <h1>Switcheroo</h1>
@@ -14,9 +15,9 @@
         seperate themselves from eachother after an accident makes them one.
     </h3>
     <div class="images">
-        <img src="/games/Switcheroo/Screenshot1.png" alt="screenshot1" />
-        <img src="/games/Switcheroo/Screenshot2.png" alt="screenshot2" />
-        <img src="/games/Switcheroo/Screenshot3.png" alt="screenshot3" />
+        <img src="{base}/games/Switcheroo/Screenshot1.png" alt="screenshot1" />
+        <img src="{base}/games/Switcheroo/Screenshot2.png" alt="screenshot2" />
+        <img src="{base}/games/Switcheroo/Screenshot3.png" alt="screenshot3" />
     </div>
     <hr />
     <div class="links">

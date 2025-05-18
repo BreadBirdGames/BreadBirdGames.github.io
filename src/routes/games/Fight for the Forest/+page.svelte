@@ -1,11 +1,12 @@
 <script>
     import "$lib/Styles/global.css";
     import Navbar from "$lib/Navbar/navbar.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <navbar-component pageName="Games"></navbar-component>
 
-<img id="background" src="/gameThumbs/FightForForest.png" />
+<img id="background" src="{base}/gameThumbs/FightForForest.png" />
 
 <div id="content">
     <h1>Fight for the Forest</h1>
