@@ -1,13 +1,6 @@
 <svelte:options customElement="grid-container" />
 
-<script lang="ts">
-    let { columns = "3", rowHeight = "1fr", gap = "2%" } = $props();
-</script>
-
-<div
-    class="grid-container"
-    style="--columns:{columns};--gap:{gap};--rowHeight:{rowHeight};"
->
+<div class="grid-container">
     <slot />
 </div>
 

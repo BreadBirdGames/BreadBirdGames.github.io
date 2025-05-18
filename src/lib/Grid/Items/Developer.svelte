@@ -35,7 +35,7 @@
 
         background-image:
             linear-gradient(lightblue, lightblue),
-            radial-gradient(at right, white 0%, lightblue 75%);
+            radial-gradient(at right, var(--text) 0%, lightblue 75%);
         background-origin: border-box;
         background-clip: padding-box, border-box;
     }
@@ -93,7 +93,7 @@
         grid-template-rows: repeat(3, 1fr);
         gap: 0px;
         background-color: lightblue;
-        color: white;
+        color: var(--text);
         flex: 1;
         margin-bottom: 10px;
         width: 350px;

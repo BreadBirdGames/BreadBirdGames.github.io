@@ -9,13 +9,17 @@
 
 <h1 id="title">The people behind the games:</h1>
 
-<grid-container columns="3">
+<grid-container>
     <developer-tile
         thumbnailPath="/devThumbs/Isabella.png"
         name="Isabella"
         pronouns="She/Her"
         description="Artist"
-    ></developer-tile>
+    >
+        <a href="https://www.instagram.com/gaw_drawzz//">
+            <i class="link fa-brands fa-instagram"></i>
+        </a>
+    </developer-tile>
     <developer-tile
         thumbnailPath="/devThumbs/Cornelius.png"
         name="Cornelius"
@@ -69,7 +73,7 @@
 
     .link {
         font-size: 32px;
-        color: white;
+        color: var(--text);
         margin-right: 5px;
     }
 </style>
