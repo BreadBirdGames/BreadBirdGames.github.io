@@ -1,4 +1,4 @@
-<div>
+<div on:touchstart={() => {}}>
     <button><slot name="toggle" /></button>
     <menu><slot /></menu>
 </div>
