@@ -13,6 +13,7 @@
         padding: 1rem;
         inline-size: 100%;
         text-decoration: none;
+        color: var(--text);
     }
 
     a:hover,

@@ -1,19 +1,23 @@
 <svelte:options customElement="game-tile" />
 
 <script lang="ts">
-    let { thumbnailPath = "", name = "", description = "" } = $props();
+    let {
+        thumbnailPath = "",
+        name = "",
+        description = "",
+        link = "",
+    } = $props();
 </script>
 
-<div class="grid-item">
+<a href={link} class="grid-item">
     <div class="content-container">
         <img class="thumbnail" src={thumbnailPath} alt={thumbnailPath} />
         <div class="text-container">
             <span class="name">{name}</span>
-            <!-- <span class="name">{name}</span>
-            <span class="description">{description}</span> -->
+            <span class="description">{description}</span>
         </div>
     </div>
-</div>
+</a>
 
 <slot />
 
@@ -24,7 +28,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        border-radius: 15px;
     }
 
     .content-container {
@@ -51,12 +54,14 @@
 
         background-origin: border-box;
         background-clip: padding-box, border-box;
-        border-radius: 0 0 15px 15px;
         text-align: center;
         text-wrap: wrap;
+        transition: height 0.5s;
     }
 
     .name {
+        font-size: 24px;
+        transition: transform 0.5s;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -65,12 +70,39 @@
         color: white;
     }
 
+    .description {
+        transition: opacity transform 0.25s;
+        opacity: 0;
+        color: white;
+        position: absolute;
+        width: 300px;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 125%);
+    }
+
+    .grid-item:hover .description {
+        opacity: 1;
+    }
+
+    .grid-item:hover .text-container {
+        height: 200px;
+    }
+
+    .grid-item:hover .name {
+        transform: translate(-50%, -95%);
+    }
+
     .grid-item {
+        text-decoration: none;
         background-color: lightblue;
         color: var(--text);
         flex: 1;
         width: 350px;
         height: 200px;
         border-radius: 15px;
+        overflow: hidden;
+        display: block;
+        margin-bottom: 25px;
     }
 </style>

@@ -22,9 +22,10 @@
         background-color: var(--mantle-primary);
         visibility: hidden;
         opacity: 0;
-        right: 45px;
+        right: 15px;
         overflow: hidden;
         border-radius: 0 0 10px 10px;
+        z-index: 99999;
     }
 
     div:hover,
