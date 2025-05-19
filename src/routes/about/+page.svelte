@@ -11,6 +11,19 @@
 
 <grid-container>
     <developer-tile
+        thumbnailPath="/devThumbs/Devin.png"
+        name="Devin"
+        pronouns="He/Him"
+        description="Artist"
+    >
+        <a href="https://www.instagram.com/devstar.art/">
+            <i class="link fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@devstar.art/">
+            <i class="link fa-brands fa-tiktok"></i>
+        </a>
+    </developer-tile>
+    <developer-tile
         thumbnailPath="/devThumbs/Isabella.png"
         name="Isabella"
         pronouns="She/Her"
@@ -39,19 +52,6 @@
         pronouns="He/Him"
         description="Game designer"
     ></developer-tile>
-    <developer-tile
-        thumbnailPath="/devThumbs/Devin.png"
-        name="Devin"
-        pronouns="He/Him"
-        description="Artist"
-    >
-        <a href="https://www.instagram.com/devstar.art/">
-            <i class="link fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@devstar.art/">
-            <i class="link fa-brands fa-tiktok"></i>
-        </a>
-    </developer-tile>
     <developer-tile
         thumbnailPath="/devThumbs/Ida.png"
         name="Ida"
