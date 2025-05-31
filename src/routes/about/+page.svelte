@@ -36,7 +36,7 @@
   <developer-tile
     thumbnailPath="/devThumbs/Cornelius.png"
     name="Cornelius"
-    pronouns="He/Him"
+    pronouns="She/Her"
     description="Programmer"
   >
     <a href="https://coffandro.github.io">
