@@ -11,8 +11,6 @@
             eager: true,
         },
     );
-
-    console.log(pageName);
     
     let pageNames = pageName.split("/");
 </script>
@@ -32,12 +30,6 @@
                          
             {#each Object.entries(modules) as [_path, module]}
                 <MenuItem
-                    class={isActive(
-                        _path
-                            .replace("../../routes/games/", "")
-                            .replace("/+page.svelte", ""),
-                        pageNames
-                    )}
                     path="/games/{_path
                         .replace('../../routes/games/', '')
                         .replace('/+page.svelte', '')}"
