@@ -2,6 +2,7 @@
     import Menu from "$lib/Menu/Menu.svelte";
     import MenuItem from "$lib/Menu/MenuItem.svelte";
     import { isActive } from "$lib";
+    import { base } from "$app/paths";
 
     let { pageName = "" } = $props();
 
@@ -21,7 +22,7 @@
 
 <ul id="navbar">
     <li class="navbar-item {isActive('BreadBird Games', pageNames)}" id="logo">
-        <a href="/"><img src="/Logo.png" alt="home" /></a>
+        <a href="/"><img src="{base}/Logo.png" alt="home" /></a>
     </li>
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
@@ -30,7 +31,7 @@
                          
             {#each Object.entries(modules) as [_path, module]}
                 <MenuItem
-                    path="/games/{_path
+                    path="{base}/games/{_path
                         .replace('../../routes/games/', '')
                         .replace('/+page.svelte', '')}"
                     title={
@@ -45,7 +46,7 @@
         </Menu>
     </li>
     <li class="navbar-item {isActive('About', pageNames)}">
-        <a href="/about"><span id="about">About Us!</span></a>
+        <a href="{base}/about"><span id="about">About Us!</span></a>
     </li>
 </ul>
 
