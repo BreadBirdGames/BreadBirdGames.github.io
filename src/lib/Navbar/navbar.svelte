@@ -1,14 +1,9 @@
-<svelte:options customElement="navbar-component" />
-
 <script lang="ts">
     import Menu from "$lib/Menu/Menu.svelte";
     import MenuItem from "$lib/Menu/MenuItem.svelte";
+    import { isActive } from "$lib";
 
     let { pageName = "" } = $props();
-
-    const isActive = (tabName: string) => {
-        return tabName === pageName ? "active" : "";
-    };
 
     const modules = import.meta.glob<Object>(
         "../../routes/games/*/+page.svelte",
@@ -16,31 +11,48 @@
             eager: true,
         },
     );
+
+    console.log(pageName);
+    
+    let pageNames = pageName.split("/");
 </script>
 
+<svelte:head>
+    <title>{pageNames[pageNames.length - 1]}</title>
+</svelte:head>
+
 <ul id="navbar">
-    <li class="navbar-item {isActive('Index')}" id="logo">
+    <li class="navbar-item {isActive('BreadBird Games', pageNames)}" id="logo">
         <a href="/"><img src="/Logo.png" alt="home" /></a>
     </li>
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
         <Menu>
-            <a class={isActive("Games")} id="games" slot="toggle">Games</a>
-
+            <a class={isActive("Games", pageNames)} id="games" slot="toggle">Games</a>
+                         
             {#each Object.entries(modules) as [_path, module]}
                 <MenuItem
+                    class={isActive(
+                        _path
+                            .replace("../../routes/games/", "")
+                            .replace("/+page.svelte", ""),
+                        pageNames
+                    )}
                     path="/games/{_path
                         .replace('../../routes/games/', '')
                         .replace('/+page.svelte', '')}"
-                >
-                    {_path
+                    title={
+                        _path
                         .replace("../../routes/games/", "")
-                        .replace("/+page.svelte", "")}
+                        .replace("/+page.svelte", "")
+                    }
+                    pageNames={pageNames}
+                >
                 </MenuItem>
             {/each}
         </Menu>
     </li>
-    <li class="navbar-item {isActive('About')}">
+    <li class="navbar-item {isActive('About', pageNames)}">
         <a href="/about"><span id="about">About Us!</span></a>
     </li>
 </ul>

@@ -1,5 +1,3 @@
-<svelte:options customElement="grid-container" />
-
 <div class="grid-container">
     <slot />
 </div>

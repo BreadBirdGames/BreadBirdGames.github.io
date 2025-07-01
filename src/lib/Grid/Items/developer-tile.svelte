@@ -1,12 +1,8 @@
-<svelte:options customElement="developer-tile" />
-
 <script lang="ts">
-    let {
-        thumbnailPath = "",
+    export let thumbnailPath = "",
         name = "",
         pronouns = "",
-        description = "",
-    } = $props();
+        description = "";
 </script>
 
 <div class="grid-item">
@@ -98,6 +94,8 @@
         margin-bottom: 10px;
         width: 350px;
         height: 200px;
+        max-width: 350px;
+        max-height: 200px;
         border-radius: 15px;
     }
 </style>

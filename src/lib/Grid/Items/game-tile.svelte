@@ -1,12 +1,8 @@
-<svelte:options customElement="game-tile" />
-
 <script lang="ts">
-    let {
-        thumbnailPath = "",
+    export let thumbnailPath = "",
         name = "",
         description = "",
-        link = "",
-    } = $props();
+        link = "";
 </script>
 
 <a href={link} class="grid-item">
@@ -103,6 +99,8 @@
         flex: 1;
         width: 350px;
         height: 200px;
+        max-width: 350px;
+        max-height: 200px;
         border-radius: 15px;
         overflow: hidden;
         display: block;

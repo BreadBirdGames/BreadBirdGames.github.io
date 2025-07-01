@@ -1,9 +1,13 @@
 <script>
-    let { path } = $props();
+    import { isActive } from "$lib";
+
+    export let path = "",
+        title = "",
+        pageNames;
 </script>
 
 <li>
-    <a href={path}><slot /></a>
+    <a class={isActive(title, pageNames)} href={path}>{title}</a>
 </li>
 
 <style>
@@ -21,5 +25,9 @@
         background-color: var(--crust-primary);
         color: var(--text);
         cursor: pointer;
+    }
+   
+    .active {
+        background-color: var(--mantle-secondary);
     }
 </style>

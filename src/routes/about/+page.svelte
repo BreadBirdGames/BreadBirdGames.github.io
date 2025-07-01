@@ -1,16 +1,15 @@
 <script>
-  import "$lib/Styles/global.css";
   import Navbar from "$lib/Navbar/navbar.svelte";
-  import Grid from "$lib/Grid/Grid.svelte";
-  import Developer from "$lib/Grid/Items/Developer.svelte";
+  import Grid from "$lib/Grid/grid.svelte";
+  import Developer from "$lib/Grid/Items/developer-tile.svelte";
 </script>
 
-<navbar-component pageName="About"></navbar-component>
+<Navbar pageName="About"></Navbar>
 
 <h1 id="title">The people behind the games:</h1>
 
-<grid-container>
-  <developer-tile
+<Grid>
+  <Developer
     thumbnailPath="/devThumbs/Devin.png"
     name="Devin"
     pronouns="He/Him"
@@ -22,8 +21,8 @@
     <a href="https://www.tiktok.com/@devstar.art/">
       <i class="link fa-brands fa-tiktok"></i>
     </a>
-  </developer-tile>
-  <developer-tile
+  </Developer>
+  <Developer
     thumbnailPath="/devThumbs/Isabella.png"
     name="Isabella"
     pronouns="She/Her"
@@ -32,10 +31,10 @@
     <a href="https://www.instagram.com/gaw_drawzz//">
       <i class="link fa-brands fa-instagram"></i>
     </a>
-  </developer-tile>
-  <developer-tile
-    thumbnailPath="/devThumbs/Cornelius.png"
-    name="Cornelius"
+  </Developer>
+  <Developer
+    thumbnailPath="/devThumbs/Frida.png"
+    name="Frida"
     pronouns="She/Her"
     description="Programmer"
   >
@@ -45,26 +44,26 @@
     <a href="https://github.com/coffandro">
       <i class="link fa-brands fa-github"></i>
     </a>
-  </developer-tile>
-  <developer-tile
+  </Developer>
+  <Developer
     thumbnailPath="/devThumbs/Daniel.png"
     name="Daniel"
     pronouns="He/Him"
     description="Game designer"
-  ></developer-tile>
-  <developer-tile
+  ></Developer>
+  <Developer
     thumbnailPath="/devThumbs/Ida.png"
     name="Ida"
     pronouns="She/Her"
     description="Composer"
-  ></developer-tile>
-  <developer-tile
+  ></Developer>
+  <Developer
     thumbnailPath="/devThumbs/Valdemar.png"
     name="Valdemar"
     pronouns="He/Him"
     description="Writer"
-  ></developer-tile>
-</grid-container>
+  ></Developer>
+</Grid>
 
 <style>
   #title {
