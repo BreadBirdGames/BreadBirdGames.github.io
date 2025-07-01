@@ -42,18 +42,6 @@
         background-color: transparent;
     }
 
-    #background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-        z-index: -1;
-    }
-
     h1 {
         text-align: center;
     }
