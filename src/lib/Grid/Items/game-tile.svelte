@@ -99,6 +99,8 @@
         flex: 1;
         width: 350px;
         height: 200px;
+        min-width: 350px;
+        min-height: 200px;
         max-width: 350px;
         max-height: 200px;
         border-radius: 15px;
