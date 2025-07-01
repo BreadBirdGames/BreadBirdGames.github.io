@@ -22,7 +22,7 @@
 
 <ul id="navbar">
     <li class="navbar-item {isActive('BreadBird Games', pageNames)}" id="logo">
-        <a href="/"><img src="{base}/Logo.png" alt="home" /></a>
+        <a href="{base}/"><img src="{base}/Logo.png" alt="home" /></a>
     </li>
     <!-- margin left auto to move to the right, also moves all children after to the right -->
     <li style="margin-left: auto;">
