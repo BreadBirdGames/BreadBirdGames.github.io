@@ -2,6 +2,7 @@
     import Navbar from "$lib/Navbar/navbar.svelte";
     import Grid from "$lib/Grid/grid.svelte";
     import GameTile from "$lib/Grid/Items/game-tile.svelte";
+    import { base } from "$app/paths";
 </script>
 
 <Navbar pageName="BreadBird Games"></Navbar>
@@ -10,26 +11,26 @@
 
 <Grid>
     <GameTile
-        link="/games/Unanswered%20Questions%20with%20H.N.%20Andersen"
-        thumbnailPath="/gameThumbs/HNAndersen.png"
+        link="{base}/games/Unanswered%20Questions%20with%20H.N.%20Andersen"
+        thumbnailPath="{base}/gameThumbs/HNAndersen.png"
         name="Unanswered Questions with H.N. Andersen"
         description="A small game in collaboration with Asia House, to provide a brain break and teach the story of H.N. Andersen."
     ></GameTile>
     <GameTile
-        link="/games/Fight%20for%20the%20Forest"
-        thumbnailPath="/gameThumbs/FightForForest.png"
+        link="{base}/games/Fight%20for%20the%20Forest"
+        thumbnailPath="{base}/gameThumbs/FightForForest.png"
         name="Fight for the Forest"
         description="A award winning 2 player arcade game where you fight for who will control the forest."
     ></GameTile>
     <GameTile
-        link="/games/Switcheroo"
-        thumbnailPath="/gameThumbs/Switcheroo.png"
+        link="{base}/games/Switcheroo"
+        thumbnailPath="{base}/gameThumbs/Switcheroo.png"
         name="Switcheroo"
         description="A winning game jam submission where play as two characters who have been merged split again."
     ></GameTile>
     <GameTile
-        link="/games/Meleetonin"
-        thumbnailPath="/gameThumbs/Meleetonin.png"
+        link="{base}/games/Meleetonin"
+        thumbnailPath="{base}/gameThumbs/Meleetonin.png"
         name="Meleetonin"
         description="A game jam submission from the Nordic Game jam 2025 where you play as a a young boy who's unable to sleep."
     ></GameTile>

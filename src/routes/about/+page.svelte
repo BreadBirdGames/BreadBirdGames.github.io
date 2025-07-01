@@ -2,6 +2,8 @@
   import Navbar from "$lib/Navbar/navbar.svelte";
   import Grid from "$lib/Grid/grid.svelte";
   import Developer from "$lib/Grid/Items/developer-tile.svelte";
+
+  import { base } from "$app/paths";
 </script>
 
 <Navbar pageName="About"></Navbar>
@@ -10,7 +12,7 @@
 
 <Grid>
   <Developer
-    thumbnailPath="/devThumbs/Devin.png"
+    thumbnailPath="{base}/devThumbs/Devin.png"
     name="Devin"
     pronouns="He/Him"
     description="Artist"
@@ -23,7 +25,7 @@
     </a>
   </Developer>
   <Developer
-    thumbnailPath="/devThumbs/Isabella.png"
+    thumbnailPath="{base}/devThumbs/Isabella.png"
     name="Isabella"
     pronouns="She/Her"
     description="Artist"
@@ -33,7 +35,7 @@
     </a>
   </Developer>
   <Developer
-    thumbnailPath="/devThumbs/Frida.png"
+    thumbnailPath="{base}/devThumbs/Frida.png"
     name="Frida"
     pronouns="She/Her"
     description="Programmer"
@@ -46,19 +48,19 @@
     </a>
   </Developer>
   <Developer
-    thumbnailPath="/devThumbs/Daniel.png"
+    thumbnailPath="{base}/devThumbs/Daniel.png"
     name="Daniel"
     pronouns="He/Him"
     description="Game designer"
   ></Developer>
   <Developer
-    thumbnailPath="/devThumbs/Ida.png"
+    thumbnailPath="{base}/devThumbs/Ida.png"
     name="Ida"
     pronouns="She/Her"
     description="Composer"
   ></Developer>
   <Developer
-    thumbnailPath="/devThumbs/Valdemar.png"
+    thumbnailPath="{base}/devThumbs/Valdemar.png"
     name="Valdemar"
     pronouns="He/Him"
     description="Writer"
