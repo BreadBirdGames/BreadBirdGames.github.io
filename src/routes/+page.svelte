@@ -11,13 +11,13 @@
 
 <Grid>
     <GameTile
-        link="{base}/games/Unanswered%20Questions%20with%20H.N.%20Andersen"
+        link="{base}/games/UQW-HNAndersen"
         thumbnailPath="{base}/gameThumbs/HNAndersen.png"
         name="Unanswered Questions with H.N. Andersen"
         description="A small game in collaboration with Asia House, to provide a brain break and teach the story of H.N. Andersen."
     ></GameTile>
     <GameTile
-        link="{base}/games/Fight%20for%20the%20Forest"
+        link="{base}/games/FFTF"
         thumbnailPath="{base}/gameThumbs/FightForForest.png"
         name="Fight for the Forest"
         description="A award winning 2 player arcade game where you fight for who will control the forest."
