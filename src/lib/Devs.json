@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Frida",
+        "pronouns": "She/Her",
+        "image": "Frida.jpg",
+        "title": "Tech Lead",
+        "description": "Frida is our resident tech nerd, who does all the other stuff no one wants to and speaks tongues."
+    },
+    {
+        "name": "Devin",
+        "pronouns": "He/Him",
+        "image": "Devin.jpg",
+        "title": "Lead Artist",
+        "description": "Devin is responsible for taking ideas from sketches to final designs."
+    },
+    {
+        "name": "Ida",
+        "pronouns": "She/Her",
+        "image": "Ida.jpg",
+        "title": "Composer & Sound",
+        "description": "Ida is behind somehow deciphering our vague ideas into actual music and sounds."
+    },
+    {
+        "name": "Valdemar",
+        "pronouns": "He/Him",
+        "image": "Valdemar.jpg",
+        "title": "Voice Actor",
+        "description": "Valdemar brings our characters to life, despite bad directions from the rest of the team."
+    },
+    {
+        "name": "Daniel",
+        "pronouns": "He/Him",
+        "image": "Daniel.jpg",
+        "title": "Game Designer",
+        "description": "Daniel is behind rambling about games no ones heard of and designing our games."
+    },
+    {
+        "name": "Francesca",
+        "pronouns": "They/Them",
+        "image": "Francesca.jpg",
+        "title": "Design Generalist",
+        "description": "Francesca always has been and always will be, from since time was but an idea."
+    }
+]

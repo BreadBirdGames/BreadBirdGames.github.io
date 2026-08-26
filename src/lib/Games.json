@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Fight for the Forest",
+        "id": "fight-for-the-forest",
+        "description": " An award winning 1v1 arcade platformer where you fight against your friend to see who will win control of the forest.",
+        "youtube_id": "vzFcYm8tkD4",
+        "game_link": "https://coffandro.itch.io/fightforforest",
+        "source_link": "https://github.com/BreadBirdGames/FightForTheForest"
+    },
+    {
+        "name": "Shimmer",
+        "id": "shimmer",
+        "description": "From Nordic Game Jam 2026! Shimmer is about you helping others shine brigther when they feel like life is nothing worth. Can you help all the others and remember yourself in the process?",
+        "youtube_id": "LxhE39ekgt8",
+        "game_link": "https://coffandro.itch.io/shimmer",
+        "source_link": "https://github.com/BreadBirdGames/shimmer"
+    },
+    {
+        "name": "Tiles In Progress",
+        "id": "tiles-in-progress",
+        "description": "Made for Københavns Mediegymnasium to introduce students to game development.",
+        "game_link": "https://coffandro.itch.io/tiles-in-progress",
+        "source_link": "https://github.com/BreadBirdGames/Tiles-In-Progress"
+    },
+    {
+        "name": "Unanswered Questions with H.N. Andersen",
+        "id": "hn-andersen",
+        "description": "A small visual novelle built for Asia House to provide a brainbreak during conferences, it sadly only works physically on premises.",
+        "images": [
+            "Screenshot1.jpg",
+            "Screenshot2.jpg",
+            "Screenshot3.jpg"
+        ],
+        "game_link": "https://breadbirdgames.github.io/EAC-GO/",
+        "source_link": "https://github.com/BreadBirdGames/EAC-GO"
+    },
+    {
+        "name": "Meleetonin",
+        "id": "meleetonin",
+        "description": "From Nordic Game Jam 2025! a game where you, as a young boy, attempt to sleep by fighting off your nightmares.",
+        "images": [
+            "Screenshot1.png",
+            "Screenshot2.png"
+        ],
+        "youtube_id": "Is0AdcDFMZo",
+        "game_link": "https://coffandro.itch.io/meleetonin",
+        "source_link": "https://github.com/BreadBirdGames/FiveNightSleep"
+    },
+    {
+        "name": "Switcharoo",
+        "id": "switcharoo",
+        "description": "Our first game and a winning game jam submission where you play as two characters trying to seperate themselves from eachother after an accident makes them one.",
+        "images": [
+            "Screenshot1.png",
+            "Screenshot2.png",
+            "Screenshot3.png"
+        ],
+        "game_link": "https://coffandro.itch.io/switcharoo",
+        "source_link": "https://github.com/BreadBirdGames/Switcharoo"
+    }
+]

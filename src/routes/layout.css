@@ -1,0 +1,28 @@
+@import url("$lib/fonts.css");
+@import url("$lib/comps.css");
+@import 'tailwindcss';
+
+
+@theme {
+    --font-display: "DynaPuff", sans-serif;
+    --font-jack: "JackArmstrong", sans-serif;
+
+    --color-base-primary: #C8EBF3;
+    --color-base-secondary: #A4D3DF;
+    --color-mantle-primary: #FAD387;
+    --color-mantle-secondary: #F6DEB1;
+    --color-crust-primary: #FFB49A;
+    --color-crust-secondary: #63636F;
+    --color-text: #44434E;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--color-base-primary);
+}
+
+:root {
+    font-family: var(--font-display);
+}

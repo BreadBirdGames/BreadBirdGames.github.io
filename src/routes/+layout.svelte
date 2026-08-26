@@ -1,7 +1,19 @@
-<script>
-    import "$lib/Styles/global.css";
+<script lang="ts">
+	import './layout.css';
+	import Navbar from '$lib/components/navbar.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
-    let { children } = $props(); 
+	let { children } = $props();
 </script>
 
-{@render children()}
+<svelte:head>
+	<link rel="icon" href="/Logo.png" />
+</svelte:head>
+
+<div class="m-0 bg-base-primary p-2 text-text">
+	<Navbar />
+
+	{@render children()}
+
+	<Footer />
+</div>
