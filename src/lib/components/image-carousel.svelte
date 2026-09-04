@@ -1,83 +1,90 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import CarouselButton from './carousel-button.svelte';
+	import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
 	let { images = [], imagePrefix = '' }: { images?: string[]; imagePrefix?: string } = $props();
 
-	let currentIndex = $state(0);
-	let imageSubtractor = 3;
+	let viewport: HTMLDivElement;
+	let canGoPrevious = $state(false);
+	let canGoNext = $state(false);
+	let hasOverflow = $state(false);
 
-	if (images.length < 3) {
-		imageSubtractor = 2;
+	const edgeTolerance = 2;
+
+	function updateControls() {
+		if (!viewport) return;
+
+		const maximumScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+
+		hasOverflow = maximumScroll > edgeTolerance;
+		canGoPrevious = viewport.scrollLeft > edgeTolerance;
+		canGoNext = viewport.scrollLeft < maximumScroll - edgeTolerance;
 	}
 
-	function previous() {
-		currentIndex = Math.max(0, currentIndex - 1);
+	function move(direction: -1 | 1) {
+		if (!viewport) return;
+
+		const slides = viewport.querySelectorAll<HTMLElement>('[data-carousel-slide]');
+		const slideWidth =
+			slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slides[0]?.offsetWidth;
+
+		if (!slideWidth) return;
+
+		const currentSlide = Math.round(viewport.scrollLeft / slideWidth);
+		viewport.scrollTo({ left: (currentSlide + direction) * slideWidth, behavior: 'smooth' });
 	}
 
-	function next() {
-		currentIndex = Math.min(images.length - imageSubtractor, currentIndex + 1);
-	}
+	onMount(() => {
+		const resizeObserver = new ResizeObserver(updateControls);
+		resizeObserver.observe(viewport);
+		updateControls();
+
+		return () => resizeObserver.disconnect();
+	});
 </script>
 
-<div class="relative w-full">
-	<!-- Left arrow -->
-	<button
-		type="button"
-		aria-label="Previous images"
-		onclick={previous}
-		disabled={currentIndex === 0}
-		class="absolute top-1/2 left-2 z-10 -translate-y-1/2
-           rounded-full bg-white/90 p-2 shadow-md
-           transition hover:bg-white
-           disabled:cursor-not-allowed disabled:opacity-30"
+<section
+	class="relative w-full rounded-lg"
+	aria-label="Game screenshots"
+	aria-roledescription="carousel"
+>
+	<div
+		class="snap-x snap-mandatory scrollbar-none overflow-x-auto scroll-smooth rounded-lg motion-reduce:scroll-auto"
+		bind:this={viewport}
+		onscroll={updateControls}
 	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			class="h-5 w-5"
-		>
-			<path d="m15 18-6-6 6-6" />
-		</svg>
-	</button>
-
-	<!-- Viewport -->
-	<div class="overflow-hidden">
-		<div
-			class="flex gap-4 transition-transform duration-300 ease-in-out"
-			style={`transform: translateX(calc(-${currentIndex} * (50% + 0.5rem)));`}
-		>
-			{#each images as image}
-				<div
-					class="w-[calc(50%-0.5rem)] shrink-0
-                 {images.length > 2 ? 'md:w-[calc(33.333%-0.667rem)]' : ''}"
+		<div class="flex gap-2">
+			{#each images as image, index}
+				<figure
+					data-carousel-slide
+					class="m-0 flex shrink-0 basis-[calc((100%_-_0.5rem)_/_2)] snap-start overflow-hidden rounded-lg border-2 border-text bg-base-secondary md:basis-[calc((100%_-_1rem)_/_3)]"
 				>
-					<img src={`${imagePrefix}/${image}`} alt="" class="h-full rounded-lg" />
-				</div>
+					<img
+						class="block w-full object-cover"
+						src={`${imagePrefix}/${image}`}
+						alt={`Game screenshot ${index + 1} of ${images.length}`}
+						draggable="false"
+					/>
+				</figure>
 			{/each}
 		</div>
 	</div>
 
-	<!-- Right arrow -->
-	<button
-		type="button"
-		aria-label="Next images"
-		onclick={next}
-		disabled={currentIndex >= images.length - imageSubtractor}
-		class="absolute top-1/2 right-2 z-10 -translate-y-1/2
-           rounded-full bg-white/90 p-2 shadow-md
-           transition hover:bg-white
-           disabled:cursor-not-allowed disabled:opacity-30"
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			class="h-5 w-5"
-		>
-			<path d="m9 18 6-6-6-6" />
-		</svg>
-	</button>
-</div>
+	{#if hasOverflow}
+		<CarouselButton
+			{move}
+			direction={-1}
+			canGo={canGoPrevious}
+			classes="left-2"
+			icon={faChevronLeft}
+		/>
+		<CarouselButton
+			{move}
+			direction={1}
+			canGo={canGoNext}
+			classes="right-2"
+			icon={faChevronRight}
+		/>
+	{/if}
+</section>

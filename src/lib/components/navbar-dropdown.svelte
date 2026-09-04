@@ -21,9 +21,9 @@
 	<span>{props.label}</span>
 
 	<div
-		class="absolute {Device.isMobile
-			? 'top-15 left-0'
-			: 'top-10 right-0'} z-999 hidden min-w-50 flex-col overflow-hidden rounded-b-lg border-2 border-text border-t-mantle-primary bg-mantle-primary group-hover:flex group-focus:flex group-active:flex"
+		class="absolute top-10 {Device.isMobile
+			? 'left-0'
+			: 'right-0'} z-999 hidden min-w-50 flex-col overflow-hidden rounded-b-lg border-2 border-text border-t-mantle-primary bg-mantle-primary group-hover:flex group-focus:flex group-active:flex"
 	>
 		{@render props?.children()}
 	</div>
