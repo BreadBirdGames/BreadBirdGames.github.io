@@ -17,7 +17,7 @@
 
 <a
 	{...props}
-	class="cursor-pointer rounded-lg p-1 text-center hover:bg-crust-primary sm:text-left {props?.classes ||
+	class="h-min cursor-pointer rounded-lg p-1 text-center hover:bg-crust-primary sm:text-left {props?.classes ||
 		''} {active ? 'bg-mantle-secondary' : ''}"
 >
 	{@render props.children()}
