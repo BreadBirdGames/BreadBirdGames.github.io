@@ -4,7 +4,7 @@
 
 	let active_list = getContext<Record<string, boolean>>('active_list');
 
-	let props: { href: string; children: any } = $props();
+	let props: { href: string; children: any; classes?: string } = $props();
 
 	let active = $derived(page.url.pathname === props.href);
 
@@ -17,9 +17,8 @@
 
 <a
 	{...props}
-	class="cursor-pointer rounded-lg p-1 hover:bg-crust-primary {props?.classes || ''} {active
-		? 'bg-mantle-secondary'
-		: ''}"
+	class="cursor-pointer rounded-lg p-1 text-center hover:bg-crust-primary sm:text-left {props?.classes ||
+		''} {active ? 'bg-mantle-secondary' : ''}"
 >
 	{@render props.children()}
 </a>

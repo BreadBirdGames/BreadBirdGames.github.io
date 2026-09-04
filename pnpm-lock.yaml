@@ -14,6 +14,9 @@ importers:
       '@fortawesome/free-solid-svg-icons':
         specifier: ^7.3.1
         version: 7.3.1
+      svelte-device-info:
+        specifier: ^1.0.6
+        version: 1.0.6
       svelte-fa:
         specifier: ^4.0.4
         version: 4.0.4(svelte@5.56.9)
@@ -713,6 +716,9 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: ^5.0.0 || ^6.0.0
 
+  svelte-device-info@1.0.6:
+    resolution: {integrity: sha512-G13YYkxnlz5AryOps8KFHFt8+5Ne7JiZgTxtYEXLVBF4UAwu9I1F+Xcd9rfhTZqUUtF9fm4qJpSi3I6p1JUt6Q==}
+
   svelte-fa@4.0.4:
     resolution: {integrity: sha512-85BomCGkTrH8kPDGvb8JrVwq9CqR9foprbKjxemP4Dtg3zPR7OXj5hD0xVYK0C+UCzFI1zooLoK/ndIX6aYXAw==}
     peerDependencies:
@@ -736,6 +742,9 @@ packages:
   totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
@@ -1245,6 +1254,10 @@ snapshots:
     transitivePeerDependencies:
       - picomatch
 
+  svelte-device-info@1.0.6:
+    dependencies:
+      tslib: 2.8.1
+
   svelte-fa@4.0.4(svelte@5.56.9):
     dependencies:
       svelte: 5.56.9
@@ -1280,6 +1293,8 @@ snapshots:
       picomatch: 4.0.5
 
   totalist@3.0.1: {}
+
+  tslib@2.8.1: {}
 
   typescript@6.0.3: {}
 

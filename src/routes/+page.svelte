@@ -20,7 +20,7 @@
 </p>
 
 <h1 id="games" class="mt-4 text-2xl font-bold">Our Games</h1>
-<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:h-[70dvh] md:grid-cols-3">
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 	{#each Object.entries(games?.default) as [key, game]}
 		<GameTile {game} />
 	{/each}
