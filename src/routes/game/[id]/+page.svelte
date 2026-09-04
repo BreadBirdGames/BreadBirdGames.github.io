@@ -17,7 +17,7 @@
 
 <div class="mt-4 flex flex-col gap-4">
 	{#if game}
-		<div class="flex justify-between gap-2">
+		<div class="flex flex-col items-center justify-between gap-2 sm:flex-row">
 			<div class="shrink">
 				<h1 class="text-4xl font-bold">{game.name ?? 'Untitled'}</h1>
 
@@ -27,7 +27,7 @@
 			</div>
 
 			{#if game.youtube_id}
-				<div class="aspect-video w-[840px] overflow-hidden rounded-xl">
+				<div class="aspect-video w-[95vw] overflow-hidden rounded-xl sm:w-[840px]">
 					<iframe
 						class="h-full w-full"
 						src={`https://www.youtube.com/embed/${game.youtube_id}`}
